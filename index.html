@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Give me Oreos</title>
+  <style>
+    body {
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .functions {
+        align-items: center;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+        background-color: yellowgreen;
+    }
+
+    #noBtn {
+        background-color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="functions">
+    <h1>give me them oreos</h1>
+    <p>by Jhydd Mahinay :)</p>
+    <br>
+  <button id="yesBtn">Yes</button>
+  <button id="noBtn" onclick="increaseSize()">No</button>
+  </div>
+  <script>
+    function increaseSize() {
+      var yesButton = document.getElementById("yesBtn");
+      var currentSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
+      var newSize = (parseFloat(currentSize) * 1.2) + "px";
+      yesButton.style.fontSize = newSize;
+    }
+  </script>
+
+</body>
+</html>
